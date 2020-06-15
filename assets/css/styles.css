@@ -14,6 +14,15 @@ a.navbar-item.is-active, .navbar-link.is-active {
 a.navbar-item.is-active:hover, .navbar-link.is-active:hover {
 	color: #000000	;
 }
+
+a.navbar-item.is-active:visited, .navbar-link.is-active:visited {
+	color: #ffffff	;
+}
+
+a.navbar-item:visited, .navbar-link:visited {
+	color: #ffffff	;
+}
+
 .hero.is-primary {
 	background-color: #2d3f96;
 }
