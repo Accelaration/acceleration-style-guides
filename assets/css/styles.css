@@ -15,7 +15,10 @@ a.navbar-item.is-active, .navbar-link.is-active {
 
 .navbar.is-primary .navbar-dropdown a.navbar-item.is-active {
 	color: #000000;
-	background-color: darkgray;
+	background-color: white;
+}
+.navbar.is-primary .navbar-dropdown a.navbar-item.is-active::before {
+	content: "\00BB";
 }
 
 
