@@ -1,6 +1,6 @@
 ---
 title: GitHub Actions | Google Cloud Build
-category: Tools
+category: Processes
 order: 40
 nav: true
 ---
