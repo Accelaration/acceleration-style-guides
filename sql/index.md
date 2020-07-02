@@ -406,7 +406,7 @@ SET
   [SPONSOR] = case when IsNull(source.[SPONSOR], 0) = 0 then target.[SPONSOR] else source.[SPONSOR] end
 WHERE ID = 1
 ```
-- `CASE` statements that are more coplicated than that should be formatted according to the following
+- `CASE` statements that are more complicated than that should be formatted according to the following
 ```sql
 CASE 
   WHEN IsNull(source.[SPONSOR], 0) = 0
