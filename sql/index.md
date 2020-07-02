@@ -399,12 +399,26 @@ WHERE
 
 `CASE` statements aren't always easy to format but try to align `WHEN`, `THEN`, and `ELSE` together inside `CASE` and `END`:
 
+- Single line `CASE` statement
+```
+UPDATE TABLE
+SET
+  [SPONSOR] = case when IsNull(source.[SPONSOR], 0) = 0 then target.[SPONSOR] else source.[SPONSOR] end
+WHERE ID = 1
+```
+- `CASE` statements that are more coplicated than that should be formatted according to the following
 ```sql
-CASE WHEN category = 'Art'
-     THEN backer_id
-     ELSE NULL
+CASE 
+  WHEN IsNull(source.[SPONSOR], 0) = 0
+     THEN target.[SPONSOR]
+  WHEN IsNull(source.[SPONSOR], 0) = 2
+     THEN target.[SPONSOR] + 1
+  WHEN IsNull(source.[SPONSOR], 0) = 3
+     THEN target.[SPONSOR] * 12
+  ELSE NULL
 END
 ```
+
 
 ## Common Table Expressions (CTEs)
 
